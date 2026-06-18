@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mon site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clocloreux</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .version {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: white;
+            color: #2a5298;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Clocloreux</h1>
-    <p>V: 1.0</p>
+
+    <div class="container">
+        <h1>Clocloreux</h1>
+        <p class="version">Version 1.0</p>
+
+
+        <button class="btn" onclick="changerTexte()">
+    Découvrir
+</button>
+
+<p id="message"></p>
+
+<script>
+function changerTexte() {
+    document.getElementById("message").textContent =
+        "Merci de visiter Clocloreux 🚀";
+}
+
+
+</script>
+    </div>
+
 </body>
 </html>
