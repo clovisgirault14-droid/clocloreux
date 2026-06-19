@@ -1,86 +1,144 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clocloreux</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clocloreux Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    body {
+      min-height: 100vh;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(
+        ellipse at top left,
+        #6b7f92 0%,
+        #3a4a55 25%,
+        #1a1a1a 55%,
+        #000000 100%
+      );
+    }
 
-        .container {
-            text-align: center;
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
-        }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background-color: #E8821A;
+      border-radius: 50px;
+      margin: 18px 24px;
+    }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
+    /* Groupe gauche : refresh + home */
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-        .version {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            margin-bottom: 20px;
-        }
+    /* Groupe centre : GAMES, CODES, OTHERS */
+    .nav-center {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: white;
-            color: #2a5298;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    /* Groupe droite : settings */
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
 
-        .btn:hover {
-            transform: scale(1.05);
-            background: #f0f0f0;
-        }
-    </style>
+    .nav-icon {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      width: 48px;
+      height: 48px;
+      transition: transform 0.15s ease;
+    }
+
+    .nav-icon:hover {
+      transform: scale(1.15);
+    }
+
+    .nav-btn {
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 28px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: #222;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 100px);
+      text-align: center;
+    }
+
+    .welcome-title {
+      font-size: clamp(2.5rem, 7vw, 6rem);
+      font-weight: 900;
+      color: #E8821A;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Clocloreux</h1>
-        <p class="version">Version 1.0</p>
-
-
-        <button class="btn" onclick="changerTexte()">
-    Découvrir
-</button>
-
-<p id="message"></p>
-
-<script>
-function changerTexte() {
-    document.getElementById("message").textContent =
-        "Merci de visiter Clocloreux 🚀";
-}
-
-
-</script>
+  <nav class="navbar">
+    <div class="nav-left">
+      <button class="nav-icon" title="Actualiser" onclick="location.reload()">&#x27F3;</button>
+      <a href="index.html" class="nav-icon" title="Accueil">&#x2302;</a>
     </div>
+
+    <div class="nav-center">
+      <button class="nav-btn" id="btn-games">GAMES</button>
+      <button class="nav-btn" id="btn-codes">CODES</button>
+      <button class="nav-btn" id="btn-others">OTHERS</button>
+    </div>
+
+    <div class="nav-right">
+      <button class="nav-icon" id="btn-settings" title="Paramètres">&#x2699;</button>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <h1 class="welcome-title">WELCOME TO THE<br>CLOCLOREUX WEBSITE</h1>
+  </main>
+
+  <script>
+    document.getElementById('btn-games').addEventListener('click', function () {});
+    document.getElementById('btn-codes').addEventListener('click', function () {});
+    document.getElementById('btn-others').addEventListener('click', function () {});
+    document.getElementById('btn-settings').addEventListener('click', function () {});
+  </script>
 
 </body>
 </html>
