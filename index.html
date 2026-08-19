@@ -330,11 +330,21 @@ function hideProfile(id){hiddenProfiles.push(id);renderProfiles()}
 
 function likeProfile(name){
   if(!getCurrentUser()){
-    showModal("🔐 Connexion nécessaire","Connecte-toi ou crée un compte avant d'utiliser le bouton J'aime.");
+    showModal(
+      "🔐 Connexion nécessaire",
+      `Connecte-toi ou crée un compte avant d'utiliser le bouton J'aime.
+       <br><br>
+       <button onclick="openLoginFromMessage()" style="width:100%;margin-top:10px">🔐 Connexion</button>`
+    );
     return;
   }
   showModal("💗 Profil aimé",`Tu as indiqué que tu apprécies le profil de <strong>${name}</strong>.<br><br>Dans une vraie application, un match réciproque serait nécessaire avant toute conversation.`);
 }
+function openLoginFromMessage(){
+  closeModal();
+  setTimeout(openAuth, 100);
+}
+
 function reportProfile(name){
   showModal("🚩 Signalement",`Le profil de <strong>${name}</strong> a été marqué pour signalement.<br><br>Dans une vraie application, ce signalement devrait être transmis à une équipe de modération.`);
 }
