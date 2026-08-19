@@ -6,232 +6,51 @@
 <title>Clox — Rencontres & Amitiés</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ffe4f0, #e5e7ff);
-  min-height: 100vh;
-  color: #222;
-}
-
-header {
-  background: rgba(255,255,255,.9);
-  backdrop-filter: blur(10px);
-  padding: 18px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 3px 15px rgba(0,0,0,.08);
-}
-
-.logo {
-  font-size: 25px;
-  font-weight: bold;
-  color: #ff4f91;
-}
-
-nav button {
-  border: none;
-  background: transparent;
-  margin-left: 12px;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.container {
-  max-width: 1050px;
-  margin: auto;
-  padding: 30px 20px;
-}
-
-.hero {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.hero h1 {
-  font-size: 38px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  color: #555;
-}
-
-.filters {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 5px 25px rgba(0,0,0,.08);
-}
-
-.filters select {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-}
-
-.profiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 7px 25px rgba(0,0,0,.1);
-  transition: .25s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.avatar {
-  height: 210px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 75px;
-  background: linear-gradient(135deg,#ffd1e4,#d9d8ff);
-}
-
-.card-content {
-  padding: 18px;
-}
-
-.card h2 {
-  font-size: 21px;
-}
-
-.age {
-  color: #777;
-  font-size: 14px;
-  margin: 4px 0 10px;
-}
-
-.bio {
-  color: #555;
-  font-size: 14px;
-  min-height: 42px;
-}
-
-.tags {
-  margin: 12px 0;
-}
-
-.tag {
-  display: inline-block;
-  background: #f1efff;
-  color: #6154c8;
-  padding: 5px 8px;
-  border-radius: 20px;
-  font-size: 12px;
-  margin: 2px;
-}
-
-.actions {
-  display: flex;
-  gap: 8px;
-  margin-top: 15px;
-}
-
-.actions button {
-  flex: 1;
-  border: none;
-  padding: 11px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.like {
-  background: #ff5b98;
-  color: white;
-}
-
-.skip {
-  background: #eee;
-}
-
-.report {
-  background: transparent;
-  color: #777;
-  font-size: 12px !important;
-  padding: 5px !important;
-}
-
-.empty {
-  text-align: center;
-  background: white;
-  border-radius: 20px;
-  padding: 40px;
-  grid-column: 1/-1;
-}
-
-.modal-bg {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-}
-
-.modal {
-  background: white;
-  width: min(90%, 450px);
-  padding: 25px;
-  border-radius: 20px;
-}
-
-.modal h2 {
-  margin-bottom: 15px;
-}
-
-.modal p {
-  line-height: 1.5;
-  color: #555;
-}
-
-.modal button {
-  margin-top: 20px;
-  padding: 11px 18px;
-  border: none;
-  border-radius: 10px;
-  background: #ff4f91;
-  color: white;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  padding: 35px;
-  color: #777;
-  font-size: 13px;
-}
-
-.notice {
-  background: #fff6d9;
-  border: 1px solid #f0d77c;
-  padding: 14px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  font-size: 13px;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffe4f0,#e5e7ff);min-height:100vh;color:#222}
+header{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);padding:18px 25px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px rgba(0,0,0,.08)}
+.logo{font-size:25px;font-weight:bold;color:#ff4f91}
+nav{display:flex;align-items:center;gap:8px}
+nav button{border:none;background:transparent;margin-left:8px;cursor:pointer;font-size:15px;padding:8px}
+.login-btn{background:#ff4f91!important;color:#fff;border-radius:10px;font-weight:bold}
+.user-area{display:none;align-items:center;gap:8px}
+.user-name{font-weight:bold;color:#ff4f91}
+.logout-btn{border:1px solid #ddd!important;border-radius:10px;background:#fff!important}
+.container{max-width:1050px;margin:auto;padding:30px 20px}
+.hero{text-align:center;margin-bottom:30px}
+.hero h1{font-size:38px;margin-bottom:10px}
+.hero p{color:#555}
+.filters{background:white;padding:20px;border-radius:20px;margin-bottom:25px;box-shadow:0 5px 25px rgba(0,0,0,.08)}
+.filters select{padding:10px;margin:5px;border-radius:10px;border:1px solid #ddd}
+.profiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;border-radius:22px;overflow:hidden;box-shadow:0 7px 25px rgba(0,0,0,.1);transition:.25s}
+.card:hover{transform:translateY(-5px)}
+.avatar{height:210px;display:flex;justify-content:center;align-items:center;font-size:75px;background:linear-gradient(135deg,#ffd1e4,#d9d8ff)}
+.card-content{padding:18px}.card h2{font-size:21px}.age{color:#777;font-size:14px;margin:4px 0 10px}
+.bio{color:#555;font-size:14px;min-height:42px}.tags{margin:12px 0}
+.tag{display:inline-block;background:#f1efff;color:#6154c8;padding:5px 8px;border-radius:20px;font-size:12px;margin:2px}
+.actions{display:flex;gap:8px;margin-top:15px}.actions button{flex:1;border:none;padding:11px;border-radius:12px;cursor:pointer;font-weight:bold}
+.like{background:#ff5b98;color:white}.skip{background:#eee}
+.report{background:transparent;color:#777;font-size:12px!important;padding:5px!important}
+.empty{text-align:center;background:white;border-radius:20px;padding:40px;grid-column:1/-1}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);justify-content:center;align-items:center;z-index:100}
+.modal{background:white;width:min(92%,480px);padding:25px;border-radius:20px;max-height:90vh;overflow:auto}
+.modal h2{margin-bottom:15px}.modal p{line-height:1.5;color:#555}
+.modal button{margin-top:20px;padding:11px 18px;border:none;border-radius:10px;background:#ff4f91;color:white;cursor:pointer}
+.auth-tabs{display:flex;gap:8px;margin-bottom:18px}
+.auth-tab{flex:1;border:1px solid #ddd!important;background:#f5f5f5!important;color:#333!important;margin:0!important}
+.auth-tab.active{background:#ff4f91!important;color:white!important}
+.auth-form{display:none}.auth-form.active{display:block}
+.form-group{margin-bottom:13px}.form-group label{display:block;font-weight:bold;margin-bottom:6px}
+.form-group input{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;font-size:15px}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#555;margin-top:10px}
+.check input{margin-top:3px}
+.auth-submit{width:100%;margin-top:15px!important}
+.auth-message{font-size:13px;margin-top:10px;min-height:18px}
+.success{color:#18864b}.error{color:#c62828}
+.notice{background:#fff6d9;border:1px solid #f0d77c;padding:14px;border-radius:15px;margin-bottom:20px;font-size:13px}
+footer{text-align:center;padding:35px;color:#777;font-size:13px}
+.small-note{font-size:12px;color:#777;margin-top:12px;line-height:1.45}
 </style>
 </head>
 
@@ -239,317 +58,315 @@ footer {
 
 <header>
   <div class="logo">💗 Clox</div>
-
   <nav>
+    <button class="login-btn" id="loginButton" onclick="openAuth()">🔐 Connexion</button>
+    <div class="user-area" id="userArea">
+      <span class="user-name" id="userName"></span>
+      <button class="logout-btn" onclick="logout()">Déconnexion</button>
+    </div>
     <button onclick="showSafety()">🛡️ Sécurité</button>
     <button onclick="showAbout()">ℹ️ À propos</button>
   </nav>
 </header>
 
 <div class="container">
-
   <section class="hero">
     <h1>Fais de nouvelles rencontres 💫</h1>
     <p>Une communauté réservée aux adolescents de 13 à 17 ans.</p>
   </section>
 
   <div class="notice">
-    🛡️ <strong>Important :</strong> Clox est un prototype.
-    Ne partage jamais ton adresse, ton établissement scolaire, ton numéro de téléphone
-    ou des photos privées avec quelqu'un rencontré en ligne.
+    🛡️ <strong>Important :</strong> Clox est un prototype. Ne partage jamais ton adresse,
+    ton établissement scolaire, ton numéro de téléphone ou des photos privées avec quelqu'un rencontré en ligne.
   </div>
 
   <section class="filters">
     <strong>🔎 Trouver des profils</strong><br><br>
-
     <select id="ageFilter" onchange="renderProfiles()">
       <option value="all">Tous les âges</option>
-      <option value="13">13 ans</option>
-      <option value="14">14 ans</option>
-      <option value="15">15 ans</option>
-      <option value="16">16 ans</option>
-      <option value="17">17 ans</option>
+      <option value="13">13 ans</option><option value="14">14 ans</option>
+      <option value="15">15 ans</option><option value="16">16 ans</option><option value="17">17 ans</option>
     </select>
-
     <select id="interestFilter" onchange="renderProfiles()">
       <option value="all">Tous les centres d'intérêt</option>
-      <option value="gaming">Gaming</option>
-      <option value="music">Musique</option>
-      <option value="sport">Sport</option>
-      <option value="art">Art</option>
-      <option value="anime">Anime</option>
-      <option value="reading">Lecture</option>
+      <option value="gaming">Gaming</option><option value="music">Musique</option>
+      <option value="sport">Sport</option><option value="art">Art</option>
+      <option value="anime">Anime</option><option value="reading">Lecture</option>
     </select>
   </section>
 
   <section id="profiles" class="profiles"></section>
-
 </div>
 
 <footer>
-  TeenLink © 2026 — Prototype éducatif<br>
+  Clox © 2026 — Prototype éducatif<br>
   La sécurité et la vie privée passent avant tout.
 </footer>
 
 <div class="modal-bg" id="modalBg">
   <div class="modal">
     <h2 id="modalTitle"></h2>
-    <p id="modalText"></p>
+    <div id="modalText"></div>
     <button onclick="closeModal()">Fermer</button>
   </div>
 </div>
 
 <script>
-
 const profiles = [
-  {
-    id: 1,
-    name: "Léa",
-    age: 15,
-    avatar: "👩🏻",
-    bio: "J'adore dessiner et découvrir de nouvelles musiques.",
-    interests: ["art", "music"]
-  },
-  {
-    id: 2,
-    name: "Lucas",
-    age: 16,
-    avatar: "👨🏻",
-    bio: "Gaming, sport et soirées films 🍿",
-    interests: ["gaming", "sport"]
-  },
-  {
-    id: 3,
-    name: "Emma",
-    age: 14,
-    avatar: "👩🏼",
-    bio: "Grande fan d'anime et de manga ✨",
-    interests: ["anime", "art"]
-  },
-  {
-    id: 4,
-    name: "Noah",
-    age: 17,
-    avatar: "👨🏽",
-    bio: "Musique, lecture et discussions tranquilles.",
-    interests: ["music", "reading"]
-  },
-  {
-    id: 5,
-    name: "Chloé",
-    age: 16,
-    avatar: "👩🏽",
-    bio: "Volley, musique et photographie 📸",
-    interests: ["sport", "music"]
-  },
-  {
-    id: 6,
-    name: "Hugo",
-    age: 15,
-    avatar: "👨🏼",
-    bio: "Jeux vidéo et passion pour les mangas.",
-    interests: ["gaming", "anime"]
-  }
+  {id:1,name:"Léa",age:15,avatar:"👩🏻",bio:"J'adore dessiner et découvrir de nouvelles musiques.",interests:["art","music"]},
+  {id:2,name:"Lucas",age:16,avatar:"👨🏻",bio:"Gaming, sport et soirées films 🍿",interests:["gaming","sport"]},
+  {id:3,name:"Emma",age:14,avatar:"👩🏼",bio:"Grande fan d'anime et de manga ✨",interests:["anime","art"]},
+  {id:4,name:"Noah",age:17,avatar:"👨🏽",bio:"Musique, lecture et discussions tranquilles.",interests:["music","reading"]},
+  {id:5,name:"Chloé",age:16,avatar:"👩🏽",bio:"Volley, musique et photographie 📸",interests:["sport","music"]},
+  {id:6,name:"Hugo",age:15,avatar:"👨🏼",bio:"Jeux vidéo et passion pour les mangas.",interests:["gaming","anime"]}
 ];
 
 let hiddenProfiles = [];
 
-function renderProfiles() {
+function getUsers(){
+  try{return JSON.parse(localStorage.getItem("clox_users") || "[]")}catch{return []}
+}
+function saveUsers(users){localStorage.setItem("clox_users",JSON.stringify(users))}
+function getCurrentUser(){return localStorage.getItem("clox_current_user")}
+function setCurrentUser(name){localStorage.setItem("clox_current_user",name)}
+function clearCurrentUser(){localStorage.removeItem("clox_current_user")}
 
-  const container = document.getElementById("profiles");
+async function hashPassword(password){
+  const data=new TextEncoder().encode(password);
+  const hash=await crypto.subtle.digest("SHA-256",data);
+  return Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,"0")).join("");
+}
 
-  const age = document.getElementById("ageFilter").value;
-  const interest = document.getElementById("interestFilter").value;
+function escapeHTML(str){
+  return String(str).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+}
 
-  let filtered = profiles.filter(profile => {
+function openAuth(){
+  showModal("🔐 Compte Clox",`
+    <div class="auth-tabs">
+      <button id="tabLogin" class="auth-tab active" onclick="switchAuth('login')">Connexion</button>
+      <button id="tabRegister" class="auth-tab" onclick="switchAuth('register')">Inscription</button>
+    </div>
 
-    if (hiddenProfiles.includes(profile.id)) {
-      return false;
-    }
-
-    if (age !== "all" && profile.age !== Number(age)) {
-      return false;
-    }
-
-    if (
-      interest !== "all" &&
-      !profile.interests.includes(interest)
-    ) {
-      return false;
-    }
-
-    return true;
-  });
-
-  if (filtered.length === 0) {
-
-    container.innerHTML = `
-      <div class="empty">
-        <h2>😕 Aucun profil</h2>
-        <p>Essaie de modifier tes filtres.</p>
+    <form id="loginForm" class="auth-form active" onsubmit="login(event)">
+      <div class="form-group">
+        <label>Nom d'utilisateur</label>
+        <input id="loginUsername" maxlength="20" autocomplete="username" required>
       </div>
-    `;
+      <div class="form-group">
+        <label>Mot de passe</label>
+        <input id="loginPassword" type="password" autocomplete="current-password" required>
+      </div>
+      <button class="auth-submit" type="submit">Se connecter</button>
+      <div id="loginMessage" class="auth-message"></div>
+    </form>
 
+    <form id="registerForm" class="auth-form" onsubmit="register(event)">
+      <div class="form-group">
+        <label>Nom d'utilisateur</label>
+        <input id="registerUsername" maxlength="20" pattern="[A-Za-z0-9_]{3,20}" required>
+      </div>
+      <div class="form-group">
+        <label>Âge</label>
+        <select id="registerAge" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:10px" required>
+          <option value="">Choisir</option>
+          <option>13</option><option>14</option><option>15</option><option>16</option><option>17</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mot de passe</label>
+        <input id="registerPassword" type="password" minlength="8" autocomplete="new-password" required>
+      </div>
+      <div class="form-group">
+        <label>Confirmer le mot de passe</label>
+        <input id="registerPassword2" type="password" minlength="8" autocomplete="new-password" required>
+      </div>
+      <label class="check">
+        <input id="registerSafety" type="checkbox" required>
+        <span>J'ai compris que Clox est réservé aux 13–17 ans et que je ne dois pas partager d'informations personnelles ou de photos privées.</span>
+      </label>
+      <button class="auth-submit" type="submit">Créer mon compte</button>
+      <div id="registerMessage" class="auth-message"></div>
+      <div class="small-note">Prototype : les comptes sont enregistrés uniquement dans le navigateur utilisé. Ils ne sont pas partagés entre les visiteurs.</div>
+    </form>
+  `);
+}
+
+function switchAuth(mode){
+  document.getElementById("loginForm").classList.toggle("active",mode==="login");
+  document.getElementById("registerForm").classList.toggle("active",mode==="register");
+  document.getElementById("tabLogin").classList.toggle("active",mode==="login");
+  document.getElementById("tabRegister").classList.toggle("active",mode==="register");
+}
+
+async function register(event){
+  event.preventDefault();
+  const message=document.getElementById("registerMessage");
+  const username=document.getElementById("registerUsername").value.trim();
+  const age=Number(document.getElementById("registerAge").value);
+  const password=document.getElementById("registerPassword").value;
+  const password2=document.getElementById("registerPassword2").value;
+
+  if(!/^[A-Za-z0-9_]{3,20}$/.test(username)){
+    message.className="auth-message error";
+    message.textContent="Nom d'utilisateur : 3 à 20 caractères, lettres, chiffres ou _ uniquement.";
+    return;
+  }
+  if(age<13 || age>17){
+    message.className="auth-message error";
+    message.textContent="Clox est réservé aux 13–17 ans.";
+    return;
+  }
+  if(password.length<8){
+    message.className="auth-message error";
+    message.textContent="Le mot de passe doit contenir au moins 8 caractères.";
+    return;
+  }
+  if(password!==password2){
+    message.className="auth-message error";
+    message.textContent="Les mots de passe ne correspondent pas.";
     return;
   }
 
-  container.innerHTML = filtered.map(profile => `
+  const users=getUsers();
+  if(users.some(u=>u.username.toLowerCase()===username.toLowerCase())){
+    message.className="auth-message error";
+    message.textContent="Ce nom d'utilisateur est déjà utilisé.";
+    return;
+  }
 
+  const passwordHash=await hashPassword(password);
+  users.push({username,age,passwordHash,createdAt:new Date().toISOString()});
+  saveUsers(users);
+  setCurrentUser(username);
+  updateAuthUI();
+
+  message.className="auth-message success";
+  message.textContent="Compte créé avec succès !";
+  setTimeout(closeModal,700);
+}
+
+async function login(event){
+  event.preventDefault();
+  const message=document.getElementById("loginMessage");
+  const username=document.getElementById("loginUsername").value.trim();
+  const password=document.getElementById("loginPassword").value;
+  const users=getUsers();
+  const user=users.find(u=>u.username.toLowerCase()===username.toLowerCase());
+
+  if(!user){
+    message.className="auth-message error";
+    message.textContent="Nom d'utilisateur ou mot de passe incorrect.";
+    return;
+  }
+
+  const passwordHash=await hashPassword(password);
+  if(passwordHash!==user.passwordHash){
+    message.className="auth-message error";
+    message.textContent="Nom d'utilisateur ou mot de passe incorrect.";
+    return;
+  }
+
+  setCurrentUser(user.username);
+  updateAuthUI();
+  message.className="auth-message success";
+  message.textContent="Connexion réussie !";
+  setTimeout(closeModal,500);
+}
+
+function logout(){
+  clearCurrentUser();
+  updateAuthUI();
+  showModal("👋 Déconnexion","Tu es maintenant déconnecté de Clox.");
+}
+
+function updateAuthUI(){
+  const current=getCurrentUser();
+  document.getElementById("loginButton").style.display=current?"none":"inline-block";
+  document.getElementById("userArea").style.display=current?"flex":"none";
+  document.getElementById("userName").textContent=current?"👤 "+current:"";
+}
+
+function renderProfiles(){
+  const container=document.getElementById("profiles");
+  const age=document.getElementById("ageFilter").value;
+  const interest=document.getElementById("interestFilter").value;
+
+  const filtered=profiles.filter(profile=>{
+    if(hiddenProfiles.includes(profile.id)) return false;
+    if(age!=="all" && profile.age!==Number(age)) return false;
+    if(interest!=="all" && !profile.interests.includes(interest)) return false;
+    return true;
+  });
+
+  if(filtered.length===0){
+    container.innerHTML=`<div class="empty"><h2>😕 Aucun profil</h2><p>Essaie de modifier tes filtres.</p></div>`;
+    return;
+  }
+
+  container.innerHTML=filtered.map(profile=>`
     <article class="card">
-
-      <div class="avatar">
-        ${profile.avatar}
-      </div>
-
+      <div class="avatar">${profile.avatar}</div>
       <div class="card-content">
-
-        <h2>${profile.name}</h2>
-
-        <div class="age">
-          ${profile.age} ans
-        </div>
-
-        <div class="bio">
-          ${profile.bio}
-        </div>
-
-        <div class="tags">
-          ${profile.interests.map(i =>
-            `<span class="tag">${interestName(i)}</span>`
-          ).join("")}
-        </div>
-
+        <h2>${escapeHTML(profile.name)}</h2>
+        <div class="age">${profile.age} ans</div>
+        <div class="bio">${escapeHTML(profile.bio)}</div>
+        <div class="tags">${profile.interests.map(i=>`<span class="tag">${interestName(i)}</span>`).join("")}</div>
         <div class="actions">
-
-          <button
-            class="skip"
-            onclick="hideProfile(${profile.id})">
-            Passer
-          </button>
-
-          <button
-            class="like"
-            onclick="likeProfile('${profile.name}')">
-            💗 J'aime
-          </button>
-
+          <button class="skip" onclick="hideProfile(${profile.id})">Passer</button>
+          <button class="like" onclick="likeProfile('${escapeHTML(profile.name)}')">💗 J'aime</button>
         </div>
-
-        <button
-          class="report"
-          onclick="reportProfile('${profile.name}')">
-          🚩 Signaler ce profil
-        </button>
-
+        <button class="report" onclick="reportProfile('${escapeHTML(profile.name)}')">🚩 Signaler ce profil</button>
       </div>
-
     </article>
-
   `).join("");
 }
 
-function interestName(value) {
-
-  const names = {
-    gaming: "🎮 Gaming",
-    music: "🎵 Musique",
-    sport: "⚽ Sport",
-    art: "🎨 Art",
-    anime: "🍥 Anime",
-    reading: "📚 Lecture"
-  };
-
-  return names[value] || value;
+function interestName(value){
+  const names={gaming:"🎮 Gaming",music:"🎵 Musique",sport:"⚽ Sport",art:"🎨 Art",anime:"🍥 Anime",reading:"📚 Lecture"};
+  return names[value]||value;
 }
+function hideProfile(id){hiddenProfiles.push(id);renderProfiles()}
 
-function hideProfile(id) {
-
-  hiddenProfiles.push(id);
-
-  renderProfiles();
+function likeProfile(name){
+  if(!getCurrentUser()){
+    showModal("🔐 Connexion nécessaire","Connecte-toi ou crée un compte avant d'utiliser le bouton J'aime.");
+    return;
+  }
+  showModal("💗 Profil aimé",`Tu as indiqué que tu apprécies le profil de <strong>${name}</strong>.<br><br>Dans une vraie application, un match réciproque serait nécessaire avant toute conversation.`);
 }
-
-function likeProfile(name) {
-
-  showModal(
-    "💗 Profil aimé",
-    `Tu as indiqué que tu apprécies le profil de ${name}.<br><br>
-    Dans une vraie application, une conversation ne devrait être
-    possible qu'après un intérêt réciproque ("match").`
-  );
+function reportProfile(name){
+  showModal("🚩 Signalement",`Le profil de <strong>${name}</strong> a été marqué pour signalement.<br><br>Dans une vraie application, ce signalement devrait être transmis à une équipe de modération.`);
 }
-
-function reportProfile(name) {
-
-  showModal(
-    "🚩 Signalement",
-    `Le profil de ${name} a été marqué pour signalement.<br><br>
-    Dans une vraie application, ce signalement devrait être envoyé
-    à une équipe de modération.`
-  );
-}
-
-function showSafety() {
-
-  showModal(
-    "🛡️ Sécurité",
-    `
+function showSafety(){
+  showModal("🛡️ Sécurité",`
     <strong>Quelques règles importantes :</strong><br><br>
-
     • Ne donne jamais ton adresse.<br>
     • Ne donne pas ton numéro de téléphone.<br>
     • Ne communique pas le nom de ton établissement scolaire.<br>
     • N'envoie pas de photos intimes ou privées.<br>
     • Signale les comportements inquiétants.<br>
     • Bloque toute personne qui te met mal à l'aise.<br>
-    • Si quelqu'un prétend avoir un âge différent de celui indiqué,
-      arrête la conversation et signale-le.
-    `
-  );
+    • Si quelqu'un prétend avoir un âge différent de celui indiqué, arrête la conversation et signale-le.
+  `);
 }
-
-function showAbout() {
-
-  showModal(
-    "ℹ️ À propos",
-    `
-    Clox est un prototype de site de rencontre destiné aux
-    adolescents de 13 à 17 ans.<br><br>
-
-    Le site web Clox est fondé par Clocloreux.<br><br>
-
-    Pour toute question, réclamation ou assistance en cas 
-    de problème technique, l'éditeur est joignable 
-    directement sur son compte Instagram officiel 
-    : @clocloreux (https://www.instagram.com/clocloreux).
-    `
-  );
+function showAbout(){
+  showModal("ℹ️ À propos",`
+    Clox est un prototype réservé aux adolescents de 13 à 17 ans.<br><br>
+    Le système de compte de cette version est une démonstration locale : les comptes sont enregistrés dans le navigateur de l'utilisateur.
+    <br><br><strong>Important :</strong> cette version ne doit pas être utilisée pour stocker de vrais comptes ou mots de passe.
+  `);
 }
-
-function showModal(title, text) {
-
-  document.getElementById("modalTitle").innerHTML = title;
-  document.getElementById("modalText").innerHTML = text;
-
-  document.getElementById("modalBg").style.display = "flex";
+function showModal(title,text){
+  document.getElementById("modalTitle").innerHTML=title;
+  document.getElementById("modalText").innerHTML=text;
+  document.getElementById("modalBg").style.display="flex";
 }
+function closeModal(){document.getElementById("modalBg").style.display="none"}
+document.getElementById("modalBg").addEventListener("click",e=>{if(e.target===e.currentTarget)closeModal()});
 
-function closeModal() {
-
-  document.getElementById("modalBg").style.display = "none";
-}
-
-document.getElementById("modalBg").addEventListener("click", function(e) {
-
-  if (e.target === this) {
-    closeModal();
-  }
-
-});
-
+updateAuthUI();
 renderProfiles();
-
 </script>
-
 </body>
 </html>
