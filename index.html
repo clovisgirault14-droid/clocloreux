@@ -6,16 +6,56 @@
 <title>Clox — Rencontres & Amitiés</title>
 
 <style>
+<style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffe4f0,#e5e7ff);min-height:100vh;color:#222}
-header{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);padding:18px 25px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px rgba(0,0,0,.08)}
+
+/* HEADER ADAPTATIF */
+header{
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+  flex-wrap: wrap; /* Permet d'éviter le chevauchement */
+  gap: 10px;
+}
+
 .logo{font-size:25px;font-weight:bold;color:#ff4f91}
-nav{display:flex;align-items:center;gap:8px}
-nav button{border:none;background:transparent;margin-left:8px;cursor:pointer;font-size:15px;padding:8px}
+nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+nav button{border:none;background:transparent;margin-left:0;cursor:pointer;font-size:15px;padding:8px}
 .login-btn{background:#ff4f91!important;color:#fff;border-radius:10px;font-weight:bold}
-.user-area{display:none;align-items:center;gap:8px}
+.user-area{display:none;align-items:center;gap:8px;flex-wrap:wrap}
 .user-name{font-weight:bold;color:#ff4f91}
 .logout-btn{border:1px solid #ddd!important;border-radius:10px;background:#fff!important}
+
+/* OPTIMISATION MOBILE (ÉCRANS < 600px) */
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    padding: 10px 15px;
+  }
+  .logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  nav, .user-area {
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+  }
+  nav button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+
 .container{max-width:1050px;margin:auto;padding:30px 20px}
 .hero{text-align:center;margin-bottom:30px}
 .hero h1{font-size:38px;margin-bottom:10px}
@@ -51,6 +91,7 @@ nav button{border:none;background:transparent;margin-left:8px;cursor:pointer;fon
 .notice{background:#fff6d9;border:1px solid #f0d77c;padding:14px;border-radius:15px;margin-bottom:20px;font-size:13px}
 footer{text-align:center;padding:35px;color:#777;font-size:13px}
 .small-note{font-size:12px;color:#777;margin-top:12px;line-height:1.45}
+</style>
 </style>
 </head>
 
